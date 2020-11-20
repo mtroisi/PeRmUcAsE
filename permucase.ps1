@@ -42,11 +42,7 @@ for ($index = $i = 0; $i -le $MaxPermutations; $i++) {
     
     # inner loop goes through each character
     0..$Length | foreach {
-        # check if character is valid alpha
-        if ($AlphaMask[$_] -eq '0') {
-            $tmp += $String[$_]
-        }
-        elseif ($mask[$_] -eq '0') {
+        if ($mask[$_] -eq '0') {
             $tmp += $String[$_]
         }
         elseif ($mask[$_] -eq '1') {
